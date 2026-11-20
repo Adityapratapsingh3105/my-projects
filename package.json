@@ -1,0 +1,14 @@
+{
+  "name": "splitmate",
+  "version": "1.0.0",
+  "description": "SplitMate – Smart Hostel Expense Splitter & Min-Tx Settle",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,green\" \"npm --prefix backend start\" \"npm --prefix frontend run dev\"",
+    "start:backend": "npm --prefix backend start",
+    "start:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
