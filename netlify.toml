@@ -1,0 +1,10 @@
+[build]
+  # The deployable site is the Vite + React app in frontend/, which has its
+  # own package.json and package-lock.json, separate from the root ones.
+  base = "frontend"
+  # Install the frontend's locked dependencies (Vite, Tailwind, etc. are
+  # devDependencies, so include them) before building. The root install only
+  # provides `concurrently`, which is not enough to run `vite build`.
+  command = "npm ci --include=dev && npm run build"
+  # Relative to the base directory: frontend/dist
+  publish = "dist"
